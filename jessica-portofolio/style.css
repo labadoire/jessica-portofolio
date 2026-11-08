@@ -2134,3 +2134,38 @@ body.project-page-enter {
     padding: 7px 4px;
   }
 }
+
+/* PROJECT CARDS — MOBILE FIX */
+@media (max-width: 640px) {
+  .project-grid {
+    grid-auto-columns: 88%;
+    gap: 14px;
+    padding-right: 6%;
+  }
+
+  .project-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .project-visual {
+    height: 210px;
+    padding: 12px;
+  }
+
+  .project-caption {
+    padding: 16px 12px 18px;
+  }
+
+  .project-caption h3 {
+    font-size: 18px;
+    line-height: 1.4;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .project-caption p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
