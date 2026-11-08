@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Distributed Data Warehouse — Jessica Gracia</title>
+    <meta name="description" content="Distributed Data Warehouse implementation using PostgreSQL, Docker, and SQL.">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">portofolio.</a>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="main.html#about">About</a>
+        <a href="main.html#projects">Projects</a>
+        <a href="main.html#experience">Experience</a>
+        <a href="main.html#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+<section id="project-warehouse" class="project-detail section">
+
+    <p class="eyebrow">PROJECT 03 / DATA ENGINEERING</p>
+
+    <h2>Distributed Data Warehouse Implementation</h2>
+
+    <p class="detail-intro">
+        Designing and evaluating a distributed data warehouse
+        using PostgreSQL and Docker to process sales data
+        across multiple database nodes.
+    </p>
+
+    <!-- PROJECT INFORMATION -->
+
+    <div class="detail-meta">
+        <div>
+            <span>FIELD</span>
+            <p>Data Engineering · Data Warehousing</p>
+        </div>
+
+        <div>
+            <span>TOOLS</span>
+            <p>PostgreSQL · SQL · Docker</p>
+        </div>
+
+        <div>
+            <span>APPROACH</span>
+            <p>Horizontal Data Distribution</p>
+        </div>
+    </div>
+
+
+    <!-- 01 OVERVIEW -->
+
+    <div class="detail-block">
+        <p class="eyebrow">01 / OVERVIEW</p>
+
+        <h3>Processing data across multiple database nodes.</h3>
+
+        <p>
+            This project explores the implementation of a
+            distributed data warehouse using PostgreSQL
+            and Docker. A dataset containing 100,000 sales
+            records was distributed across three database
+            nodes based on transaction year.
+        </p>
+
+        <p>
+            The objective was to demonstrate how distributed
+            processing divides analytical workloads while
+            maintaining consistency and accuracy in the
+            final query results.
+        </p>
+    </div>
+
+
+    <!-- 02 SYSTEM ARCHITECTURE -->
+
+    <div class="detail-block">
+        <p class="eyebrow">02 / SYSTEM ARCHITECTURE</p>
+
+        <h3>One coordinator. Three distributed nodes.</h3>
+
+        <p>
+            The architecture consists of one central
+            PostgreSQL coordinator and three distributed
+            PostgreSQL database nodes, each responsible
+            for storing sales data from a specific year.
+        </p>
+
+        <div class="detail-meta">
+            <div>
+                <span>COORDINATOR</span>
+                <p>dw-postgres</p>
+            </div>
+
+            <div>
+                <span>DISTRIBUTION METHOD</span>
+                <p>Horizontal Distribution by Year</p>
+            </div>
+
+            <div>
+                <span>TOTAL RECORDS</span>
+                <p>100,000 Sales Transactions</p>
+            </div>
+        </div>
+
+        <div class="result-grid">
+            <div>
+                <span>NODE 01 / 2024</span>
+                <strong>33,333</strong>
+                <p>Sales Records</p>
+            </div>
+
+            <div>
+                <span>NODE 02 / 2025</span>
+                <strong>33,333</strong>
+                <p>Sales Records</p>
+            </div>
+
+            <div>
+                <span>NODE 03 / 2026</span>
+                <strong>33,334</strong>
+                <p>Sales Records</p>
+            </div>
+        </div>
+
+        <p class="detail-note">
+            Docker containers were used to run the
+            PostgreSQL coordinator and database nodes
+            in an isolated environment.
+        </p>
+    </div>
+
+        
+    <!-- DISTRIBUTED DATABASE ARCHITECTURE -->
+    <div class="warehouse-architecture">
+
+        <p class="architecture-label">
+            DISTRIBUTED DATABASE ARCHITECTURE
+        </p>
+
+        <div class="architecture-coordinator">
+            <span>POSTGRESQL COORDINATOR</span>
+            <h4>dw-postgres</h4>
+            <p>Global Query Aggregation</p>
+        </div>
+
+        <div class="architecture-connector">
+            <div class="connector-horizontal"></div>
+            <div class="connector-branches">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="architecture-nodes">
+
+            <div class="architecture-node">
+                <span>NODE 01</span>
+                <h4>dw-node-1</h4>
+                <p>2024 Sales Data</p>
+                <strong>33,333</strong>
+                <small>RECORDS</small>
+            </div>
+
+            <div class="architecture-node">
+                <span>NODE 02</span>
+                <h4>dw-node-2</h4>
+                <p>2025 Sales Data</p>
+                <strong>33,333</strong>
+                <small>RECORDS</small>
+            </div>
+
+            <div class="architecture-node">
+                <span>NODE 03</span>
+                <h4>dw-node-3</h4>
+                <p>2026 Sales Data</p>
+                <strong>33,334</strong>
+                <small>RECORDS</small>
+            </div>
+
+        </div>
+
+        <p class="architecture-note">
+            100,000 sales records distributed across
+            three PostgreSQL nodes by transaction year.
+        </p>
+
+    </div>
+
+
+    <!-- 03 IMPLEMENTATION -->
+
+    <div class="detail-block">
+        <p class="eyebrow">03 / IMPLEMENTATION</p>
+
+        <h3>From data distribution to global analysis.</h3>
+
+        <p>
+            Sales transactions were horizontally distributed
+            across three PostgreSQL nodes according to their
+            transaction year. Each node independently
+            processed its assigned subset of the dataset.
+        </p>
+
+        <ul>
+            <li>
+                Distributed 100,000 sales records
+                across three PostgreSQL nodes.
+            </li>
+
+            <li>
+                Validated record counts and transaction
+                date ranges for each node.
+            </li>
+
+            <li>
+                Executed SQL aggregation queries
+                independently on each node.
+            </li>
+
+            <li>
+                Combined local product-level aggregates
+                to calculate global sales totals.
+            </li>
+
+            <li>
+                Verified the global Top 10 products
+                against single-node query results.
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- 04 PERFORMANCE -->
+
+    <div class="detail-block">
+        <p class="eyebrow">04 / PERFORMANCE ANALYSIS</p>
+
+        <h3>Comparing query execution approaches.</h3>
+
+        <p>
+            Query execution times were measured across
+            single-node, partitioned, and distributed
+            PostgreSQL configurations to examine how
+            data processing workloads were handled.
+        </p>
+
+        <div class="result-grid">
+            <div>
+                <span>SINGLE POSTGRESQL</span>
+                <strong>16.138</strong>
+                <p>Milliseconds · 100K records</p>
+            </div>
+
+            <div>
+                <span>PARTITIONED POSTGRESQL</span>
+                <strong>21.379</strong>
+                <p>Milliseconds · 100K records</p>
+            </div>
+
+            <div>
+                <span>GLOBAL AGGREGATION</span>
+                <strong>1.048</strong>
+                <p>Milliseconds · 3K aggregated rows</p>
+            </div>
+        </div>
+
+        <p>
+            Each distributed node processed approximately
+            one-third of the dataset, with local query
+            execution times ranging from 5.327 to
+            5.765 milliseconds.
+        </p>
+
+        <p class="detail-note">
+            These measurements represent different
+            workloads and do not establish that the
+            distributed architecture is faster overall.
+            The experiment primarily demonstrates
+            workload distribution and local aggregation.
+        </p>
+
+        
+        <!-- QUERY PERFORMANCE COMPARISON -->
+        <div class="warehouse-performance">
+
+            <p class="eyebrow">QUERY EXECUTION TIME</p>
+
+            <div class="performance-chart">
+
+                <div class="performance-row">
+                    <span>Single PostgreSQL</span>
+                    <div class="performance-track">
+                        <div class="performance-bar" style="width:75.5%"></div>
+                    </div>
+                    <strong>16.138 ms</strong>
+                </div>
+
+                <div class="performance-row">
+                    <span>Partitioned PostgreSQL</span>
+                    <div class="performance-track">
+                        <div class="performance-bar" style="width:100%"></div>
+                    </div>
+                    <strong>21.379 ms</strong>
+                </div>
+
+                <div class="performance-row">
+                    <span>Distributed Node 01</span>
+                    <div class="performance-track">
+                        <div class="performance-bar" style="width:27%"></div>
+                    </div>
+                    <strong>5.765 ms</strong>
+                </div>
+
+                <div class="performance-row">
+                    <span>Distributed Node 02</span>
+                    <div class="performance-track">
+                        <div class="performance-bar" style="width:24.9%"></div>
+                    </div>
+                    <strong>5.327 ms</strong>
+                </div>
+
+                <div class="performance-row">
+                    <span>Distributed Node 03</span>
+                    <div class="performance-track">
+                        <div class="performance-bar" style="width:26.6%"></div>
+                    </div>
+                    <strong>5.694 ms</strong>
+                </div>
+
+                <div class="performance-row">
+                    <span>Global Aggregation</span>
+                    <div class="performance-track">
+                        <div class="performance-bar" style="width:4.9%"></div>
+                    </div>
+                    <strong>1.048 ms</strong>
+                </div>
+
+            </div>
+
+            <p class="detail-note">
+                Execution times represent different workloads:
+                single and partitioned processing use 100,000 raw
+                records, each distributed node processes approximately
+                33,333 records, and global aggregation combines
+                3,000 summarized rows. Results are not a direct
+                comparison of end-to-end performance.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- 05 GLOBAL AGGREGATION -->
+
+    <div class="detail-block">
+        <p class="eyebrow">05 / GLOBAL AGGREGATION</p>
+
+        <h3>Combining local insights into global results.</h3>
+
+        <p>
+            Each distributed node generated approximately
+            1,000 product-level aggregated records.
+            These local results were combined into
+            3,000 aggregated rows before calculating
+            global sales totals by product.
+        </p>
+
+        <div class="result-grid">
+            <div>
+                <span>LOCAL AGGREGATION</span>
+                <strong>1,000</strong>
+                <p>Rows per node</p>
+            </div>
+
+            <div>
+                <span>COMBINED RESULTS</span>
+                <strong>3,000</strong>
+                <p>Aggregated Rows</p>
+            </div>
+
+            <div>
+                <span>GLOBAL OUTPUT</span>
+                <strong>TOP 10</strong>
+                <p>Products by Total Sales</p>
+            </div>
+        </div>
+
+        <p>
+            The distributed global aggregation produced
+            the same Top 10 product ranking as the
+            single-node query, confirming the correctness
+            of the analytical results.
+        </p>
+    </div>
+
+
+    <!-- 06 KEY FINDINGS -->
+
+    <div class="detail-block">
+        <p class="eyebrow">06 / KEY FINDINGS</p>
+
+        <h3>Scaling analytical workloads through distribution.</h3>
+
+        <ul>
+            <li>
+                Successfully distributed 100,000 sales
+                records across three PostgreSQL nodes.
+            </li>
+
+            <li>
+                Demonstrated independent local processing
+                and product-level aggregation.
+            </li>
+
+            <li>
+                Reduced the records used in final aggregation
+                from 100,000 raw sales rows to 3,000
+                summarized records.
+            </li>
+
+            <li>
+                Verified matching Top 10 product rankings
+                between single-node and distributed results.
+            </li>
+        </ul>
+
+        <p>
+            This project strengthened practical understanding
+            of distributed data architecture, SQL query
+            processing, workload distribution, and
+            analytical result verification.
+        </p>
+    </div>
+
+
+    <!-- BACK TO PROJECTS -->
+
+    <a class="back-projects" href="main.html#projects">
+        ← BACK TO SELECTED WORK
+    </a>
+
+</section>
+
+</main>
+
+<footer>
+    © 2026 Jessica Gracia
+</footer>
+
+</body>
+</html>

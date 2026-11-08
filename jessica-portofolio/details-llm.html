@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessica Gracia — Portfolio</title>
+    <meta name="description" content="Jessica Gracia's Business Analytics portfolio.">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html#home" class="logo">portofolio.</a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="main.html#about">About</a>
+            <a href="main.html#projects">Projects</a>
+            <a href="main.html#experience">Experience</a>
+            <a href="main.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PROJECT DETAIL: LLM EMAIL THREAT DETECTION -->
+        <section id="project-llm" class="project-detail section">
+        <p class="eyebrow">PROJECT 01 / AI &amp; RESEARCH</p>
+
+        <h2>LLM-Driven Email Threat Detection</h2>
+
+        <p class="detail-intro">
+            Exploring how large language models can identify phishing
+            and business email compromise in enterprise email.
+        </p>
+
+        <div class="detail-meta">
+            <div>
+            <span>FIELD</span>
+            <p>AI Research · Natural Language Processing</p>
+            </div>
+            <div>
+            <span>TOOLS</span>
+            <p>Python · Google Colab · OpenRouter API</p>
+            </div>
+            <div>
+            <span>APPROACH</span>
+            <p>Zero-shot LLM Classification</p>
+            </div>
+        </div>
+
+        <div class="detail-visual-section">
+            <p class="eyebrow">RESEARCH FRAMEWORK</p>
+
+            <img
+                class="framework-image"
+                src="assets/images/research-framework.png"
+                alt="LLM email threat detection research framework"
+                loading="lazy"
+            >
+        </div>
+
+        <div class="detail-block">
+            <p class="eyebrow">01 / OVERVIEW</p>
+            <h3>Can LLMs recognize email threats?</h3>
+            <p>
+            This research explores zero-shot classification of enterprise
+            emails into legitimate, phishing, and business email compromise
+            (BEC) categories, comparing LLM-based approaches with a
+            traditional machine learning baseline.
+            </p>
+        </div>
+
+        <div class="detail-block">
+            <p class="eyebrow">02 / METHODOLOGY</p>
+            <h3>From data preparation to evaluation.</h3>
+            <ul>
+            <li>Curated and standardized 87,447 email records from two public datasets.</li>
+            <li>Prepared training, validation, and test splits.</li>
+            <li>Compared zero-shot LLM predictions with TF-IDF and Logistic Regression.</li>
+            <li>Evaluated the final models on a balanced sample of 30 test emails.</li>
+            </ul>
+        </div>
+
+        <div class="detail-block">
+            <p class="eyebrow">03 / KEY FINDINGS</p>
+            <h3>Traditional baseline vs. LLMs.</h3>
+
+            <div class="result-grid">
+            <div>
+                <span>TF-IDF + LOGISTIC REGRESSION</span>
+                <strong>100%</strong>
+                <p>Accuracy · Test sample</p>
+            </div>
+            <div>
+                <span>GEMMA 4</span>
+                <strong>83.3%</strong>
+                <p>Accuracy · Test sample</p>
+            </div>
+            <div>
+                <span>GPT-OSS 120B</span>
+                <strong>70%</strong>
+                <p>Accuracy · Test sample</p>
+            </div>
+            </div>
+
+            <p class="detail-note">
+            The final evaluation used only 30 test emails. These results
+            are preliminary and should not be generalized to production
+            performance.
+            </p>
+
+            <div class="detail-visual-section">
+                <p class="eyebrow">MODEL EVALUATION</p>
+                <h3>Confusion Matrix Analysis</h3>
+
+                <div class="confusion-grid">
+                    <img src="assets/images/confusion-matrix-baseline.png"
+                        alt="Logistic Regression confusion matrix"
+                        loading="lazy">
+
+                    <img src="assets/images/confusion-matrix-gemma.png"
+                        alt="Gemma confusion matrix"
+                        loading="lazy">
+
+                    <img src="assets/images/confusion-matrix-gpt-oss.png"
+                        alt="GPT-OSS confusion matrix"
+                        loading="lazy">
+                </div>
+
+                <p class="detail-note">
+                    Both LLMs struggled to distinguish BEC from phishing,
+                    highlighting the challenges of detecting threats with
+                    overlapping linguistic patterns.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="detail-block">
+            <p class="eyebrow">04 / RESEARCH OUTCOME</p>
+            <h3>Research accepted for presentation.</h3>
+            <p>
+            The paper was accepted for presentation at ISITDI 2026.
+            The project involved software development, data curation,
+            model evaluation, and original research writing.
+            </p>
+        </div>
+
+        <a class="back-projects" href="main.html#projects">← BACK TO SELECTED WORK</a>
+        </section>
+
+
+    </main>
+
+  <footer>
+    © 2026 Jessica Gracia
+  </footer>
+</body>
+</html>

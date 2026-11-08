@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LUMERIA System Analysis & Design — Jessica Gracia</title>
+    <meta name="description" content="LUMERIA jewelry marketplace system analysis and design case study.">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">portofolio.</a>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="main.html#about">About</a>
+        <a href="main.html#projects">Projects</a>
+        <a href="main.html#experience">Experience</a>
+        <a href="main.html#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+<section id="project-lumeria" class="project-detail section">
+
+    <p class="eyebrow">PROJECT 06 / SYSTEM ANALYSIS & DESIGN</p>
+
+    <h2>LUMERIA System Analysis & Design</h2>
+
+    <p class="detail-intro">
+        Designing a premium jewelry marketplace concept through
+        business analysis, process modeling, system requirements,
+        and client/server architecture planning.
+    </p>
+
+    <!-- PROJECT INFORMATION -->
+
+    <div class="detail-meta">
+        <div>
+            <span>FIELD</span>
+            <p>Information Systems · Business Analysis</p>
+        </div>
+
+        <div>
+            <span>METHODS</span>
+            <p>Fishbone · UML · Process Modeling</p>
+        </div>
+
+        <div>
+            <span>DELIVERABLES</span>
+            <p>System Design · Risk Assessment · UI Concept</p>
+        </div>
+    </div>
+
+
+    <!-- 01 OVERVIEW -->
+
+    <div class="detail-block">
+        <p class="eyebrow">01 / OVERVIEW</p>
+
+        <h3>A premium marketplace for jewelry.</h3>
+
+        <p>
+            LUMERIA is a proposed niche jewelry marketplace designed
+            to connect local and international jewelry brands with consumers.
+            The concept emphasizes curated products, authenticity,
+            transparent product information, jewelry customization,
+            and a premium shopping experience.
+        </p>
+
+        <p>
+            This academic project translates the business concept
+            into process models, use cases, system behavior diagrams,
+            risk considerations, and a proposed client/server design.
+        </p>
+    </div>
+
+
+    <!-- 02 PROBLEM ANALYSIS -->
+
+    <div class="detail-block">
+        <p class="eyebrow">02 / PROBLEM ANALYSIS</p>
+
+        <h3>Understanding barriers to trust and engagement.</h3>
+
+        <p>
+            The project examined two proposed business challenges:
+            low consumer trust in buying jewelry online and low
+            potential user activity and transaction volume.
+        </p>
+
+        <p>
+            Fishbone diagrams were used to organize contributing
+            factors related to people, processes, products,
+            management, technology, and market conditions.
+        </p>
+
+        <figure class="tableau-showcase">
+            <a href="assets/images/lumeria-fishbone.png"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <img
+                    src="assets/images/lumeria-fishbone.png"
+                    alt="LUMERIA fishbone problem analysis"
+                    loading="lazy"
+                >
+            </a>
+
+            <figcaption>
+                FISHBONE PROBLEM ANALYSIS
+                <span>CLICK TO EXPAND ↗</span>
+            </figcaption>
+        </figure>
+    </div>
+
+
+    <!-- 03 SYSTEM REQUIREMENTS -->
+
+    <div class="detail-block">
+        <p class="eyebrow">03 / SYSTEM REQUIREMENTS</p>
+
+        <h3>Mapping customer and admin interactions.</h3>
+
+        <p>
+            The use case modeling identifies the system interactions
+            needed for customers to explore and order jewelry,
+            and for administrators to manage catalogs
+            and transaction records.
+        </p>
+
+        <ul>
+            <li>Customer registration and account creation.</li>
+            <li>Viewing jewelry product details and placing orders.</li>
+            <li>Submitting reviews for completed orders.</li>
+            <li>Adding jewelry products to the catalog.</li>
+            <li>Generating monthly jewelry sales reports.</li>
+            <li>Creating and approving transaction receipts.</li>
+        </ul>
+
+        <p class="detail-note">
+            The report documents use case scenarios, actors,
+            preconditions, postconditions, process steps,
+            and exception conditions.
+        </p>
+    </div>
+
+
+    <!-- 04 PROCESS MODELING -->
+
+    <div class="detail-block">
+        <p class="eyebrow">04 / PROCESS MODELING</p>
+
+        <h3>Designing the order journey.</h3>
+
+        <p>
+            Activity, sequence, and state transition diagrams
+            were prepared to describe how users and the proposed
+            system would interact during registration,
+            product browsing, ordering, stock updates,
+            reviews, and receipt generation.
+        </p>
+
+        <figure class="tableau-showcase">
+            <a href="assets/images/lumeria-order-activity.png"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <img
+                    src="assets/images/lumeria-order-activity.png"
+                    alt="LUMERIA Create Order Activity Diagram"
+                    loading="lazy"
+                >
+            </a>
+
+            <figcaption>
+                CREATE ORDER — ACTIVITY DIAGRAM
+                <span>CLICK TO EXPAND ↗</span>
+            </figcaption>
+        </figure>
+
+        <p class="detail-note">
+            The designed checkout flow covers cart review,
+            delivery details, payment selection,
+            order processing, and confirmation.
+        </p>
+    </div>
+
+
+    <!-- 05 SYSTEM ARCHITECTURE -->
+
+    <div class="detail-block">
+        <p class="eyebrow">05 / SYSTEM ARCHITECTURE</p>
+
+        <h3>Separating client, application, and data layers.</h3>
+
+        <p>
+            The proposed system uses a client/server architecture
+            that separates customer-facing interfaces,
+            business logic, and centralized data storage.
+        </p>
+
+        <div class="result-grid">
+
+            <div>
+                <span>CLIENT</span>
+                <strong>01</strong>
+                <p>Android & iOS Interfaces</p>
+            </div>
+
+            <div>
+                <span>APPLICATION SERVER</span>
+                <strong>02</strong>
+                <p>Orders, Pricing & Payments</p>
+            </div>
+
+            <div>
+                <span>DATABASE SERVER</span>
+                <strong>03</strong>
+                <p>Products, Customers & Transactions</p>
+            </div>
+
+        </div>
+
+        <p>
+            The project also proposes server and device
+            specifications, including possible application
+            technologies and relational database options.
+            These specifications are design proposals,
+            not a deployed system stack.
+        </p>
+
+        <figure class="tableau-showcase">
+            <a href="assets/images/lumeria-client-server.png"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <img
+                    src="assets/images/lumeria-client-server.png"
+                    alt="LUMERIA Client Server Architecture"
+                    loading="lazy"
+                >
+            </a>
+
+            <figcaption>
+                PROPOSED CLIENT/SERVER SPECIFICATIONS
+                <span>CLICK TO EXPAND ↗</span>
+            </figcaption>
+        </figure>
+    </div>
+
+
+    <!-- 06 RISK ASSESSMENT -->
+
+    <div class="detail-block">
+        <p class="eyebrow">06 / RISK ASSESSMENT</p>
+
+        <h3>Considering reliability, security, and trust.</h3>
+
+        <p>
+            The risk assessment identifies potential issues
+            in authentication, personal data protection,
+            product information, pricing, payment processing,
+            inventory, and external API or logistics integrations.
+        </p>
+
+        <p>
+            Proposed mitigation approaches include two-factor
+            authentication, encryption, input validation,
+            transaction monitoring, backup procedures,
+            and clearer product verification processes.
+        </p>
+    </div>
+
+
+    <!-- 07 PROJECT OUTCOME -->
+
+    <div class="detail-block">
+        <p class="eyebrow">07 / PROJECT OUTCOME</p>
+
+        <h3>Turning a business concept into a system blueprint.</h3>
+
+        <p>
+            The project produced a structured system design
+            proposal that connects business challenges
+            with user requirements, workflow diagrams,
+            architecture planning, and risk management.
+        </p>
+
+        <p>
+            It strengthened my understanding of business
+            process analysis, use case documentation,
+            system modeling, and designing solutions
+            around user and organizational needs.
+        </p>
+
+        <p class="detail-note">
+            Academic system design concept.
+            The report does not document a production
+            deployment or measured post-launch outcomes.
+        </p>
+    </div>
+
+
+    <!-- BACK TO PROJECTS -->
+
+    <a class="back-projects" href="main.html#projects">
+        ← BACK TO SELECTED WORK
+    </a>
+
+</section>
+
+</main>
+
+<footer>
+    © 2026 Jessica Gracia
+</footer>
+
+</body>
+</html>

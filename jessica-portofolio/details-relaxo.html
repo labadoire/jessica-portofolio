@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ABC-XYZ Inventory Analysis — Jessica Gracia</title>
+    <meta name="description" content="ABC-XYZ Inventory Analysis for Relaxo using Business Analytics.">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">portofolio.</a>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="main.html#about">About</a>
+        <a href="main.html#projects">Projects</a>
+        <a href="main.html#experience">Experience</a>
+        <a href="main.html#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+<section id="project-relaxo" class="project-detail section">
+
+    <p class="eyebrow">PROJECT 05 / OPERATIONS ANALYTICS</p>
+
+    <h2>ABC–XYZ Inventory Analysis</h2>
+
+    <p class="detail-intro">
+        Analyzing product value and demand variability
+        to develop inventory strategies that balance
+        stock availability, operational efficiency,
+        and warehouse capacity.
+    </p>
+
+    <!-- PROJECT INFORMATION -->
+
+    <div class="detail-meta">
+        <div>
+            <span>FIELD</span>
+            <p>Operations Analytics · Supply Chain</p>
+        </div>
+
+        <div>
+            <span>METHOD</span>
+            <p>ABC Classification · XYZ Analysis</p>
+        </div>
+
+        <div>
+            <span>FOCUS</span>
+            <p>Inventory Optimization · SKU Segmentation</p>
+        </div>
+    </div>
+
+
+    <!-- 01 OVERVIEW -->
+
+    <div class="detail-block">
+        <p class="eyebrow">01 / OVERVIEW</p>
+
+        <h3>Managing inventory complexity through analytics.</h3>
+
+        <p>
+            This case study examines inventory challenges
+            faced by Relaxo, a footwear company managing
+            approximately 10,000 stock-keeping units (SKUs).
+        </p>
+
+        <p>
+            Despite growing inventory levels, the company
+            experienced declining service performance,
+            forecasting difficulties, and increasing
+            pressure on warehouse capacity.
+        </p>
+
+        <p>
+            The analysis applies ABC–XYZ classification
+            to a dataset of 150 SKUs to identify product
+            priorities and recommend differentiated
+            inventory management strategies.
+        </p>
+    </div>
+
+
+    <!-- 02 BUSINESS CHALLENGES -->
+
+    <div class="detail-block">
+        <p class="eyebrow">02 / BUSINESS CHALLENGES</p>
+
+        <h3>More inventory does not always mean better service.</h3>
+
+        <p>
+            Relaxo faced operational challenges caused
+            by its extensive product assortment,
+            fluctuating demand, and production planning
+            constraints.
+        </p>
+
+        <div class="result-grid">
+            <div>
+                <span>WAREHOUSE UTILIZATION</span>
+                <strong>95%</strong>
+                <p>Capacity in Use</p>
+            </div>
+
+            <div>
+                <span>MONTH-END SALES</span>
+                <strong>40%</strong>
+                <p>Approx. Share in Final Week</p>
+            </div>
+
+            <div>
+                <span>FORECAST ACCURACY</span>
+                <strong>40%</strong>
+                <p>Approx. SKU-Level Accuracy</p>
+            </div>
+        </div>
+
+        <p class="detail-note">
+            These case conditions illustrate the
+            difficulty of balancing product availability,
+            warehouse capacity, and demand uncertainty.
+        </p>
+    </div>
+
+
+    <!-- 03 METHODOLOGY -->
+
+    <div class="detail-block">
+        <p class="eyebrow">03 / METHODOLOGY</p>
+
+        <h3>Segmenting inventory by value and demand.</h3>
+
+        <p>
+            ABC–XYZ analysis combines two classification
+            methods to understand the economic importance
+            and demand variability of individual products.
+        </p>
+
+        <ul>
+            <li>
+                ABC Analysis — classifies products
+                according to cumulative sales value.
+                Category A represents the first 80%,
+                B the next 15%, and C the final 5%.
+            </li>
+
+            <li>
+                XYZ Analysis — evaluates demand stability
+                using the coefficient of variation (CV),
+                distinguishing stable, moderately variable,
+                and highly variable demand.
+            </li>
+
+            <li>
+                ABC–XYZ Matrix — combines both classifications
+                into nine inventory segments to support
+                more targeted stock policies.
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- 04 CLASSIFICATION MATRIX -->
+
+    <div class="detail-block">
+        <p class="eyebrow">04 / INVENTORY SEGMENTATION</p>
+
+        <h3>Understanding the SKU portfolio.</h3>
+
+        <p>
+            The resulting matrix categorizes 150 SKUs
+            according to sales value contribution and
+            demand variability.
+        </p>
+
+        <div class="relaxo-matrix-wrapper">
+
+            <table class="relaxo-matrix">
+                <thead>
+                    <tr>
+                        <th>ABC / XYZ</th>
+                        <th>X · Stable</th>
+                        <th>Y · Moderate</th>
+                        <th>Z · Variable</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>A · High Value</th>
+                        <td>17</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>30</td>
+                    </tr>
+
+                    <tr>
+                        <th>B · Medium Value</th>
+                        <td>31</td>
+                        <td>9</td>
+                        <td>12</td>
+                        <td>52</td>
+                    </tr>
+
+                    <tr>
+                        <th>C · Low Value</th>
+                        <td>46</td>
+                        <td>10</td>
+                        <td>12</td>
+                        <td>68</td>
+                    </tr>
+
+                    <tr class="matrix-total">
+                        <th>Total SKUs</th>
+                        <td>94</td>
+                        <td>25</td>
+                        <td>31</td>
+                        <td>150</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <p class="detail-note">
+            Class X accounts for 94 SKUs (62.7%),
+            while segment CX is the largest individual
+            group with 46 SKUs (30.7%).
+        </p>
+    </div>
+
+
+    <!-- 05 KEY FINDINGS -->
+
+    <div class="detail-block">
+        <p class="eyebrow">05 / KEY FINDINGS</p>
+
+        <h3>Identifying inventory priorities.</h3>
+
+        <div class="result-grid">
+            <div>
+                <span>CATEGORY A</span>
+                <strong>80%</strong>
+                <p>Sales Value Contribution</p>
+            </div>
+
+            <div>
+                <span>CLASS X</span>
+                <strong>94</strong>
+                <p>Stable-Demand SKUs</p>
+            </div>
+
+            <div>
+                <span>SEGMENT CZ</span>
+                <strong>12</strong>
+                <p>Low-Value, Volatile SKUs</p>
+            </div>
+        </div>
+
+        <ul>
+            <li>
+                Category A contains only 20% of the
+                analyzed SKUs but contributes 80%
+                of total sales value.
+            </li>
+
+            <li>
+                Most analyzed products have relatively
+                stable demand, suggesting that different
+                stock policies are needed across segments.
+            </li>
+
+            <li>
+                Segment AX contains 17 high-value,
+                stable-demand SKUs that should receive
+                strong replenishment priority.
+            </li>
+
+            <li>
+                Segment AZ includes seven high-value
+                products with volatile demand, requiring
+                closer monitoring and flexible replenishment.
+            </li>
+
+            <li>
+                Segment CZ contains 12 low-value,
+                highly variable products that are
+                candidates for assortment review.
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- 06 RECOMMENDATIONS -->
+
+    <div class="detail-block">
+        <p class="eyebrow">06 / BUSINESS RECOMMENDATIONS</p>
+
+        <h3>Turning inventory insights into action.</h3>
+
+        <p>
+            The analysis recommends differentiated
+            inventory policies rather than applying
+            a uniform service level to every SKU.
+        </p>
+
+        <ul>
+            <li>
+                Prioritize AX products with higher
+                availability targets and reliable
+                replenishment schedules.
+            </li>
+
+            <li>
+                Monitor AY and AZ products more frequently
+                and adjust stock levels based on actual
+                demand patterns.
+            </li>
+
+            <li>
+                Maintain balanced stock policies for
+                B-category items according to demand stability.
+            </li>
+
+            <li>
+                Review low-contribution, volatile products
+                such as CZ for reduced stocking or
+                order-on-demand strategies.
+            </li>
+
+            <li>
+                Improve coordination between Sales,
+                Supply Chain, and Finance to align
+                inventory decisions.
+            </li>
+        </ul>
+
+        <p class="detail-note">
+            These are recommendations from the case
+            analysis, not measured outcomes from an
+            implemented inventory policy.
+        </p>
+    </div>
+
+
+    <!-- 07 PROJECT OUTCOME -->
+
+    <div class="detail-block">
+        <p class="eyebrow">07 / PROJECT OUTCOME</p>
+
+        <h3>Using analytics to support operational decisions.</h3>
+
+        <p>
+            This case study demonstrates how ABC–XYZ
+            segmentation can help businesses distinguish
+            high-priority inventory from lower-contribution
+            products and design more targeted inventory
+            management strategies.
+        </p>
+
+        <p>
+            The project strengthened my understanding
+            of demand variability, inventory segmentation,
+            operational trade-offs, and translating
+            analytical findings into business recommendations.
+        </p>
+    </div>
+
+
+    <!-- BACK TO PROJECTS -->
+
+    <a class="back-projects" href="main.html#projects">
+        ← BACK TO SELECTED WORK
+    </a>
+
+</section>
+
+</main>
+
+<footer>
+    © 2026 Jessica Gracia
+</footer>
+
+</body>
+</html>
