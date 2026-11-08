@@ -2135,37 +2135,43 @@ body.project-page-enter {
   }
 }
 
-/* PROJECT CARDS — MOBILE FIX */
+/* FIX PROJECT CARDS ON MOBILE */
 @media (max-width: 640px) {
-  .project-grid {
-    grid-auto-columns: 88%;
-    gap: 14px;
-    padding-right: 6%;
+  .skills-projects .project-grid {
+    display: grid;
+    grid-template-columns: none !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: 88% !important;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 8px 0 18px;
   }
 
-  .project-card {
+  .skills-projects .project-card {
     width: 100%;
     min-width: 0;
+    box-sizing: border-box;
+    padding: 0;
   }
 
-  .project-visual {
-    height: 210px;
-    padding: 12px;
+  .skills-projects .project-caption {
+    padding: 16px;
   }
 
-  .project-caption {
-    padding: 16px 12px 18px;
-  }
-
-  .project-caption h3 {
-    font-size: 18px;
+  .skills-projects .project-caption h3 {
+    font-size: 17px;
     line-height: 1.4;
-    overflow-wrap: normal;
     word-break: normal;
+    overflow-wrap: break-word;
   }
 
-  .project-caption p {
+  .skills-projects .project-caption p {
     font-size: 12px;
     line-height: 1.6;
+  }
+
+  .skills-projects .project-visual {
+    height: 200px;
+    min-height: 0;
   }
 }
